@@ -1,18 +1,26 @@
-5. Write Requirement Specifications for Backend Features
-mandatory
-Score: 0.0% (Checks completed: 0.0%)
-Objective: Document the technical and functional requirements for each feature.
+# 📄 Airbnb Clone – Backend Requirements Specification
 
-Instructions:
+This document outlines the **functional** and **technical** requirements for three key backend features of the Airbnb Clone project. Each section includes API endpoints, input/output specifications, validation rules, and performance expectations.
 
-Write detailed requirement specifications for at least three key backend features from Task 1 (e.g., User Authentication, Property Management, Booking System).
+---
 
-Include API endpoints, input/output specifications, validation rules, and performance criteria.
+## 1. 🔐 User Authentication
 
-Document this in a requirements.md file and store it in the root directory of the alx-airbnb-project-documentation GitHub repository.
-Commit and push the changes to your repository.
+### ✅ Functional Requirements
+- Users can register as **Guest** or **Host**.
+- Users must be able to **log in** and receive a **JWT token**.
+- JWT is used to **authorize** protected routes.
+- Users can **update their profile**.
 
-Repo:
+### 📌 API Endpoints
 
-GitHub repository: alx-airbnb-project-documentation
-File: requirements.md
+#### POST `/api/auth/register`
+**Input:**
+```json
+{
+  "first_name": "Jane",
+  "last_name": "Doe",
+  "email": "jane@example.com",
+  "password": "SecurePass123!",
+  "role": "host"
+}
